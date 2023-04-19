@@ -1,3 +1,5 @@
+import 'package:firstapp/models/catalog.dart';
+import 'package:firstapp/widgets/item_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:firstapp/widgets/drawer.dart';
 
@@ -7,15 +9,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dummyList = List.generate(15, (index) => CatalogModel.items[0]);  // 1. remove this line
     return Scaffold(
       appBar: AppBar(
         title: Text('catalog Appee'),
       ),
-        body: Center(
-          child: Container(
-          child: Text('Welcome to $days of flutter by $name')
-          )
-          ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: dummyList.length,  // 1. CatalogModel.items.length
+          itemBuilder: (context, index){
+            return ItemWidget(
+              item: dummyList[index],   // 1. CatalogModel.items[index]
+            );
+          },
+        ),
+      ),
           drawer: MyDrawer(),
       );
   }
