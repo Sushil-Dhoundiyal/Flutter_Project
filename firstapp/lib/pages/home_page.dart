@@ -1,6 +1,5 @@
 import 'package:firstapp/models/catalog.dart';
 import 'package:firstapp/utils/routes.dart';
-import 'package:firstapp/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
