@@ -9,20 +9,29 @@ import 'catalog_Image.dart';
 class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ! context.isMobile
+      ? GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 18),
+        shrinkWrap: true,
+        itemCount: CatalogModel.items.length,
+        itemBuilder: (context, index) {
+          final catalog = CatalogModel.items[index];
+          return InkWell(
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeDetailPage(catalog: catalog,)
+                ),
+            ),
+            child: catalogItem(catalog: catalog));
+      },
+    ):ListView.builder(
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
         final catalog = CatalogModel.items[index];
         return InkWell(
-            onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => HomeDetailPage(
-                      catalog: catalog,
-                    )
-                ),
-            ),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeDetailPage(catalog: catalog))),
             child: catalogItem(catalog: catalog));
       },
     );
@@ -37,9 +46,7 @@ class catalogItem extends StatelessWidget {
         super(key: key);
   @override
   Widget build(BuildContext context) {
-    return VxBox(
-      child: Row(
-        children: [
+    var children2 = [
           Hero(
             tag: Key(catalog.id.toString()),
             child: CatalogImage(
@@ -63,9 +70,15 @@ class catalogItem extends StatelessWidget {
                   ],
                 ).pOnly(right: 8.0)
             ],
-          ))
-        ],
-      ),
+          ).p(context.isMobile ? 0 : 15)
+          )
+        ];
+    return VxBox(
+      child: context.isMobile? Row(
+        children: children2,
+      ):Column(
+        children: children2,
+      )
     ).color(context.cardColor).roundedLg.square(150).make().py12();
   }
 }
