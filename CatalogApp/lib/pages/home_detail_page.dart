@@ -1,5 +1,5 @@
-import 'package:firstapp/models/catalog.dart';
-import 'package:firstapp/widgets/Home_Widgets/add_to_cart.dart';
+import 'package:CatalogApp/models/catalog.dart';
+import 'package:CatalogApp/widgets/Home_Widgets/add_to_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 

@@ -1,4 +1,4 @@
-import 'package:firstapp/utils/routes.dart';
+import 'package:CatalogApp/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 

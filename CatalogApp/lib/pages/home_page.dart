@@ -1,7 +1,7 @@
-import 'package:firstapp/core/store.dart';
-import 'package:firstapp/models/cart.dart';
-import 'package:firstapp/models/catalog.dart';
-import 'package:firstapp/utils/routes.dart';
+import 'package:CatalogApp/core/store.dart';
+import 'package:CatalogApp/models/cart.dart';
+import 'package:CatalogApp/models/catalog.dart';
+import 'package:CatalogApp/utils/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   final int days = 30;
 
   final String name = "Sushil";
-  // final url = "https://jsonbin.io/app/bins/64422048c0e7653a05a8df4c";   // 2. LINK NOT WORKING ****** DOUBT ****
+  // final url = "https://jsonbin.io/app/bins/64422048c0e7653a05a8df4c";  
 
   @override
   void initState() {
@@ -35,8 +35,8 @@ class _HomePageState extends State<HomePage> {
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
 
-    // final response = await http.get(Uri.parse(url));      // 2. FOR FETCHING DATA FROM NETWORKING
-    // final catalogJson = response.body;                 // ************* DOUBT ****************
+    // final response = await http.get(Uri.parse(url));      // FOR FETCHING DATA FROM NETWORKING
+    // final catalogJson = response.body;                 
 
     final decodedData = jsonDecode(catalogJson);      // FETCHING DATA FROM LOCAL JSON FILE
     var productsData = decodedData["products"];

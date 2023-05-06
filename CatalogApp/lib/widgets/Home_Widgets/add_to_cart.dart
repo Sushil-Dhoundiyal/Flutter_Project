@@ -1,6 +1,6 @@
-import 'package:firstapp/core/store.dart';
-import 'package:firstapp/models/cart.dart';
-import 'package:firstapp/models/catalog.dart';
+import 'package:CatalogApp/core/store.dart';
+import 'package:CatalogApp/models/cart.dart';
+import 'package:CatalogApp/models/catalog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';

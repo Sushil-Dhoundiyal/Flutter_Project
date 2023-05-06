@@ -1,5 +1,5 @@
-import 'package:firstapp/models/cart.dart';
-import 'package:firstapp/models/catalog.dart';
+import 'package:CatalogApp/models/cart.dart';
+import 'package:CatalogApp/models/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class MyStore extends VxStore{

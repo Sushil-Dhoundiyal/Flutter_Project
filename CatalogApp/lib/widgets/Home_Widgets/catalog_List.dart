@@ -1,6 +1,6 @@
-import 'package:firstapp/pages/home_detail_page.dart';
+import 'package:CatalogApp/pages/home_detail_page.dart';
 import 'package:flutter/material.dart';
-import 'package:firstapp/models/catalog.dart';
+import 'package:CatalogApp/models/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'add_to_cart.dart';

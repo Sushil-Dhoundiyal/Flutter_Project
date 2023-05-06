@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firstapp">
    <application
-        android:label="firstapp"
+        android:label="CatalogApp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -32,3 +32,4 @@
             android:value="2" />
     </application>
 </manifest>
+
