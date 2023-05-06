@@ -47,8 +47,7 @@ class HomeDetailPage extends StatelessWidget {
                       catalog.name.text.xl4.color(context.accentColor).bold.make(),
               catalog.desc.text.textStyle(context.captionStyle).xl.make(),
               10.heightBox,
-              "Sadipscing justo tempor elitr dolor sea ipsum, est consetetur tempor elitr dolor, amet elitr diam rebum et sit vero eos elitr, sed stet consetetur gubergren sea voluptua stet ea stet, diam stet stet dolore sed clita vero at no at. Labore at dolor erat sed invidunt consetetur amet et voluptua."
-              .text
+              "Key Features Memory: 8 GB RAM and 128 GB internal memory Dimensions: 161.4 mmx75.6 mmx7.8 mm Color options: Phantom Black Battery Capacity: 4800 mAh Lithium-ion battery Warranty information: 1 Year Manufacturer Warranty is provided by the manufacturer from the date of purchase".text
               .textStyle(context.captionStyle)
               .make().p16()
                     ],

@@ -8,7 +8,7 @@ import 'package:velocity_x/velocity_x.dart';
 class AddToCart extends StatelessWidget {
   final Item catalog;
   AddToCart({
-    super.key, required this.catalog,    //  *********************
+    super.key, required this.catalog,
   });
 
 

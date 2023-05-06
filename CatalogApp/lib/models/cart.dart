@@ -4,7 +4,7 @@ import 'package:velocity_x/velocity_x.dart';
 class CartModel{
 
 // CATALOG FIELD
-late CatalogModel _catalog;        //    ***********************late
+late CatalogModel _catalog;        
 
 // COLLECTION OF IDS - STORE IDS OF EACH ITEM
 final List<int> _itemIds = [];
@@ -34,7 +34,7 @@ class AddMutation extends VxMutation<MyStore>{
   AddMutation(this.item);
   @override
   perform() {
-    store!.cart._itemIds.add(item.id);        //   !  **************************
+    store!.cart._itemIds.add(item.id);        
   }
   
 }
@@ -46,7 +46,7 @@ class RemoveMutation extends VxMutation<MyStore>{
   RemoveMutation(this.item);
   @override
   perform() {
-    store!.cart._itemIds.remove(item.id);        //   !  **************************
+    store!.cart._itemIds.remove(item.id);        
   }
   
 }

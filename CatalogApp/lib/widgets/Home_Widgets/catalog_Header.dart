@@ -13,7 +13,7 @@ class CatalogHeader extends StatelessWidget {
             .xl5
             .bold
             .color(context.theme.accentColor)
-            .make(), //"Catalog App".text.make() == Text("Catalog App",....)
+            .make(),
         "Trending products".text.xl2.make(),
       ],
     );
